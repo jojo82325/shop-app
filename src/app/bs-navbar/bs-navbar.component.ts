@@ -13,7 +13,7 @@ export class BsNavbarComponent{
   user$: Observable<firebase.User>;
 
   constructor(private afAuth: AngularFireAuth) {
-    this.user = afAuth.authState;
+    this.user$ = afAuth.authState;
    }
   logout(){
     this.afAuth.auth.signOut();
